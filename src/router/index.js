@@ -1,19 +1,19 @@
+import modules from './modules/router.js'
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
+import store from '@/store'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  }
-]
+const router = new Router({
+    routers: [...modules] // 路由表
+})
 
-const router = new VueRouter({
-  routes
+routers.beforeEach((to, from, next) => {
+
+})
+routers.afterEach((to, from) => {
+
 })
 
 export default router
