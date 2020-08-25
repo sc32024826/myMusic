@@ -1,7 +1,7 @@
 import modules from './modules/router.js'
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from '@/store'
+// import store from '@/store'
 
 Vue.use(Router)
 
@@ -10,7 +10,7 @@ const router = new Router({
 })
 
 routers.beforeEach((to, from, next) => {
-
+    // if(store.state.userNmae)
 })
 routers.afterEach((to, from) => {
 
